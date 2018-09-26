@@ -9,7 +9,7 @@ pipeline{
   stage('deploy') {
 	steps{
 	  sh "echo 'mkdir -p \$HOME/khaopio' | ssh -i ${JENKINS_HOME}/sshkeys/id_rsa khaopio007@khaopio.in";
-	  sh "scp -i ${JENKINS_HOME}/sshkeys/id_rsa . khaopio007@khaopio.in:\$HOME/khaopio/";
+	  sh "scp -i ${JENKINS_HOME}/sshkeys/id_rsa ./* khaopio007@khaopio.in:\$HOME/khaopio/";
 	}
    }
  }
