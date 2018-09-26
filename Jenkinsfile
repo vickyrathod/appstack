@@ -3,7 +3,7 @@ pipeline{
  stages{
   stage('scm') {
 	steps{
-	 git = 'https://github.com/vickyrathod/appstack.git'
+	 git url: 'https://github.com/vickyrathod/appstack.git'
 	}
   }
   stage('deploy') {
