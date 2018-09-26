@@ -1,0 +1,30 @@
+version: '3.3'
+services:
+ nodeui:
+    container_name: node
+    image: 
+    ports:
+        - "80:3000"
+    links:
+        - boot
+    depends_on:
+        - boot
+ boot:
+    container_name: catalogservices
+    image: vicky123/catalogservices
+    ports:
+        - "8080:8080"
+    links:
+        - mysql
+    depends_on:
+        - mysql
+ mysql:
+    container_name: mysql
+    image: mysql/mysql-server:5.7
+    environment:
+      MYSQL_DATABASE: test
+      MYSQL_ROOT_PASSWORD: rathod
+      MYSQL_ROOT_HOST: '%'
+    ports:
+    - "3306:3306"
+    restart: always
