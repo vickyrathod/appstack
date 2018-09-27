@@ -4,6 +4,9 @@ alias docker-compose='docker run --rm \
     -w="/rootfs/$PWD" \
     docker/compose:1.13.0'
 
+#going to docker-compose
+cd $HOME/khaopio
+
 docker-compose down
 docker-compose rm
 docker-compose up
