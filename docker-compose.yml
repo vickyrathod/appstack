@@ -2,7 +2,7 @@ version: '3.0'
 services:
  nodeui:
     container_name: node
-    image: 
+    image: docker pull vicky123/nodeapp 
     ports:
         - "80:3000"
     links:
