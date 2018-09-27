@@ -1,3 +1,3 @@
-sudo ./docker-compose down
-sudo ./docker-compose rm
-sudo ./docker-compose up
+docker-compose down
+docker-compose rm
+docker-compose up
