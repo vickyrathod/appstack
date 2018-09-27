@@ -8,5 +8,4 @@ alias docker-compose='docker run --rm \
 cd $HOME/khaopio
 
 docker-compose down
-docker-compose rm
 docker-compose -d up
